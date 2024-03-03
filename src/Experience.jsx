@@ -16,7 +16,7 @@ export default function Experience() {
       <Perf />
       <Sky />
       <Physics>
-        <Debug />
+        {/* <Debug /> */}
 
         <Level count={blocksCount} seed={blocksSeed} />
         <Player />

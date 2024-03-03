@@ -9,22 +9,22 @@ THREE.ColorManagement.legacyMode = false;
 const boxGeometry = new THREE.BoxGeometry(1, 1, 1);
 
 const floor1Material = new THREE.MeshStandardMaterial({
-  color: "limegreen",
+  color: "white",
   metalness: 0,
   roughness: 0,
 });
 const floor2Material = new THREE.MeshStandardMaterial({
-  color: "greenyellow",
+  color: "#7c5fe3",
   metalness: 0,
   roughness: 0,
 });
 const obstacleMaterial = new THREE.MeshStandardMaterial({
-  color: "orangered",
+  color: "yellow",
   metalness: 0,
   roughness: 1,
 });
 const wallMaterial = new THREE.MeshStandardMaterial({
-  color: "salatgray",
+  color: "#1e1345",
   metalness: 0,
   roughness: 0,
 });
@@ -58,10 +58,9 @@ export function BlockStart({ position = [0, 0, 0] }) {
 }
 
 function BlockEnd({ position = [0, 0, 0] }) {
-  const hamburger = useGLTF("./hamburger.glb");
-  console.log(hamburger);
+  const chalice = useGLTF("./chalice.glb");
 
-  hamburger.scene.children.forEach((mesh) => {
+  chalice.scene.children.forEach((mesh) => {
     mesh.castShadow = true;
   });
 
@@ -85,7 +84,7 @@ function BlockEnd({ position = [0, 0, 0] }) {
         restitution={0.2}
         friction={0}
       >
-        <primitive object={hamburger.scene} scale={0.2} />
+        <primitive object={chalice.scene} scale={1.4} />
       </RigidBody>
     </group>
   );

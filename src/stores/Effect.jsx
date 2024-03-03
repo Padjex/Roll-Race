@@ -4,11 +4,11 @@ export default function () {
   return (
     <EffectComposer>
       <DepthOfField focusDistance={0.01} focalLength={0.2} bokehScale={3} />
-      {/* <SSR
+      <SSR
         intensity={0.45}
         exponent={1}
         distance={10}
-        fade={10}
+        fade={140}
         roughnessFade={1}
         thickness={10}
         ior={0.45}
@@ -17,7 +17,7 @@ export default function () {
         blend={0.95}
         correction={1}
         correctionRadius={1}
-        blur={0}
+        blur={1}
         blurKernel={1}
         blurSharpness={10}
         jitter={0.75}
@@ -29,7 +29,7 @@ export default function () {
         useRoughnessMap={true}
         resolutionScale={1}
         velocityResolutionScale={1}
-      /> */}
+      />
     </EffectComposer>
   );
 }
